@@ -2,7 +2,7 @@
 
 ![sika58](imgur.com image replace me!)
 
-*A short description of the keyboard/project*
+A Lily58 styled split ergo for those with very short pinkies.
 
 * Keyboard Maintainer: [Noelle](https://github.com/fivedee)
 * Hardware Supported: Pro Micro, nice!nano, and any other controller with the Pro Micro's pinout
