@@ -1,0 +1,6 @@
+#pragma once
+
+#define HSV_TRUE_WHITE 0, 64, 255
+#define HSV_PALE_YELLOW 35, 191, 255
+#define HSV_BLOSSOM 0, 191, 255
+#define HSV_BLUISH_WHITE 137, 84, 255
