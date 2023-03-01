@@ -147,12 +147,11 @@ bool oled_task_user(void) {
             oled_write_P(PSTR("??? "), false);
     }
 	// Writes Leader key status
-    bool leader_sequence_active(void) {
-		oled_write_P(PSTR(" LDR ON\n\n"), false);
-	} else {
-		oled_write_P(PSTR("       \n\n"), false);
-	}
-
+	if (leader_sequence_active()) {
+			oled_write_P(PSTR(" LEAD ON\n\n"), false);
+		} else {
+			oled_write_P(PSTR("        \n\n"), false);
+		}
 	// Modifier Status
 	uint8_t mod_state = get_oneshot_mods();
 		oled_write_P(PSTR("CMD "), mod_state & MOD_MASK_GUI);
@@ -172,6 +171,9 @@ bool oled_task_user(void) {
   return false;
 }
 #endif
+
+
+#ifdef LEADER_ENABLE
 
 LEADER_EXTERNS();
 
@@ -244,3 +246,4 @@ void matrix_scan_user(void) {
 			SEND_STRING(":blossom:");
 	}
 }
+#endif
