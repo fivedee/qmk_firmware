@@ -23,8 +23,7 @@ enum layers {
     DEFAULT = 0,
     LOWER,
     RAISE,
-    ADJUST,
-    MODS
+    ADJUST
 };
 
 enum custom_keycodes {
@@ -43,8 +42,7 @@ enum custom_keycodes {
     FLUSH,
     POGG,
     HUG,
-    THINK,
-	OS_CLEAR
+    THINK
 };
 
 // clang-format off
@@ -67,15 +65,13 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    [DEFAULT] = LAYOUT(KC_NO, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_NO, LSFT_T(KC_TAB), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_NO, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_NO, KC_NO, KC_NO, KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_NO, KC_NO, OSL(4), KC_ESC, KC_SPC, MO(1), MO(2), KC_ENT, KC_BSPC, OSL(4), KC_NO),
+    [DEFAULT] = LAYOUT(KC_NO, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_NO, LSFT_T(KC_TAB), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_NO, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_NO, KC_NO, KC_NO, KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_NO, KC_NO, KC_LCTL, LALT_T(KC_ESC), KC_SPC, MO(1), MO(2), KC_ENT, KC_BSPC, OSL(4), KC_NO),
 
-    [LOWER] = LAYOUT(KC_NO, KC_GRV, KC_TILD, KC_LBRC, KC_RBRC, KC_AMPR, KC_TRNS, KC_7, KC_8, KC_9, KC_PLUS, KC_NO, KC_TRNS, KC_AT, KC_EXLM, KC_LPRN, KC_RPRN, KC_PERC, KC_MINS, KC_4, KC_5, KC_6, KC_ASTR, KC_TRNS, KC_NO, KC_HASH, KC_CIRC, KC_LCBR, KC_RCBR, KC_DLR, KC_NO, KC_NO, KC_NO, KC_NO, KC_UNDS, KC_1, KC_2, KC_3, KC_EQL, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_0, KC_NO),
+    [LOWER] = LAYOUT(KC_NO, KC_GRV, KC_TILD, KC_LBRC, KC_RBRC, KC_AMPR, KC_TRNS, KC_7, KC_8, KC_9, KC_PLUS, KC_NO, KC_PIPE, KC_AT, KC_EXLM, KC_LPRN, KC_RPRN, KC_PERC, KC_MINS, KC_4, KC_5, KC_6, KC_ASTR, KC_BSLS, KC_NO, KC_HASH, KC_CIRC, KC_LCBR, KC_RCBR, KC_DLR, KC_NO, KC_NO, KC_NO, KC_NO, KC_UNDS, KC_1, KC_2, KC_3, KC_EQL, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_0, KC_NO),
 
     [RAISE] = LAYOUT(KC_NO, KC_F1, KC_F2, KC_F3, KC_F4, KC_TRNS, KC_PGDN, LCTL(KC_LEFT), KC_UP, LCTL(KC_RGHT), KC_HOME, KC_NO, KC_TRNS, KC_F5, KC_F6, KC_F7, KC_F8, KC_TRNS, KC_PGUP, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, KC_TRNS, KC_NO, KC_F9, KC_F10, KC_F11, KC_F12, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_PSCR, KC_SCRL, KC_PAUS, KC_CAPS, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_INS, KC_DEL, KC_TRNS, KC_NO),
 
-    [ADJUST] = LAYOUT(KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_VOLD, KC_VOLU, KC_MUTE, KC_TRNS, KC_NO, KC_TRNS, LCTL(KC_A), LCTL(KC_S), LGUI(KC_D), KC_TRNS, KC_TRNS, KC_TRNS, KC_MPRV, KC_MPLY, KC_MNXT, KC_TRNS, KC_TRNS, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, DT_DOWN, DT_PRNT, DT_UP, KC_TRNS, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO),
-
-    [MODS] = LAYOUT(KC_NO, KC_LGUI, KC_LALT, KC_LCTL, KC_TRNS, KC_TRNS, LCTL(KC_Y), KC_TRNS, KC_RCTL, KC_RALT, KC_RGUI, KC_NO, KC_TRNS, OSM(MOD_LGUI), OSM(MOD_LALT), OSM(MOD_LCTL), LCTL(KC_F), KC_TRNS, KC_TRNS, KC_TRNS, OSM(MOD_RCTL), OSM(MOD_RALT), OSM(MOD_RGUI), KC_TRNS, KC_NO, LCTL(KC_Z), LCTL(KC_X), LCTL(KC_C), LCTL(KC_V), KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, SGUI(KC_S), KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_TRNS, OS_CLEAR, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, OS_CLEAR, KC_TRNS, KC_NO) 
+    [ADJUST] = LAYOUT(KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_VOLD, KC_VOLU, KC_MUTE, KC_TRNS, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MPRV, KC_MPLY, KC_MNXT, KC_TRNS, KC_TRNS, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, DT_DOWN, DT_PRNT, DT_UP, KC_TRNS, KC_NO, KC_NO, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO)
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -176,13 +172,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {
             }
             break;
-		case OS_CLEAR:
-			if (record->event.pressed) {
-				clear_oneshot_layer_state(ONESHOT_PRESSED);
-				clear_oneshot_mods();
-			} else {
-			}
-			break;
         }
     return true;
 
@@ -235,18 +224,16 @@ bool oled_task_user(void) {
         case ADJUST:
             oled_write_P(PSTR("ADJUST\n\n"), false);
             break;
-        case MODS:
-            oled_write_P(PSTR("MODS\n\n"), false);
-            break;
         default:
             oled_write_P(PSTR("???\n\n"), false);
     }
     
 	// Modifier Status
-	uint8_t mod_state = get_oneshot_mods();
+	uint8_t mod_state = get_mods();
+		oled_write_P(PSTR("SFT  "), mod_state & MOD_MASK_SHIFT);
 		oled_write_P(PSTR("CMD  "), mod_state & MOD_MASK_GUI);
 		oled_write_P(PSTR("ALT  "), mod_state & MOD_MASK_ALT);
-		oled_write_P(PSTR("CTRL "), mod_state & MOD_MASK_CTRL);
+		oled_write_P(PSTR("CTL  "), mod_state & MOD_MASK_CTRL);
     // Write host Keyboard LED Status to OLEDs
     /*led_t led_usb_state = host_keyboard_led_state();
     oled_write_P(led_usb_state.num_lock ? PSTR("NUMLCK ") : PSTR("       "), false);

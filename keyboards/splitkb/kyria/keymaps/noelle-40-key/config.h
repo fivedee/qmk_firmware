@@ -33,12 +33,11 @@
 #define IGNORE_MOD_TAP_INTERRUPT
 
 //Tapping term settings
-#define TAPPING_TERM 175
+#define TAPPING_TERM 140
 
 //Combo mod settings
 #define COMBO_TERM 40
-#define COMBO_MUST_HOLD_MODS
-#define COMBO_HOLD_TERM 125
+#define COMBO_HOLD_TERM 140
 #define COMBO_ONLY_FROM_LAYER 0
 
 // Allows to use either side as the master. Look at the documentation for info:

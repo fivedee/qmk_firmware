@@ -5,5 +5,4 @@ RGBLIGHT_ENABLE = yes      # Enable keyboard RGB underglow
 MOUSEKEY_ENABLE = no
 VIA_ENABLE = yes
 DYNAMIC_TAPPING_TERM_ENABLE = yes # Enables the ability to modify the mod tap term
-COMBO_ENABLE = no
 BOOTMAGIC_ENABLE = yes
