@@ -1,0 +1,71 @@
+LEADER_EXTERNS();
+
+void matrix_scan_user(void) {
+	LEADER_DICTIONARY() {
+		leading = false;
+		leader_end();
+		//ESC
+		SEQ_ONE_KEY(KC_Q) {
+			tap_code(KC_ESC);
+		}
+		//CAPS WORD
+		SEQ_TWO_KEYS(KC_C, KC_W) {
+			caps_word_toggle();
+		}
+		//CAPS LOCK
+		SEQ_TWO_KEYS(KC_C, KC_L) {
+			tap_code(KC_CAPS);
+		}
+		//CLOSE WINDOW
+		SEQ_TWO_KEYS(KC_Q, KC_T) {
+			tap_code16(A(KC_F4));
+		}
+		//CUT
+		SEQ_ONE_KEY(KC_X) {
+			tap_code16(C(KC_X));
+		}
+		//COPY
+		SEQ_ONE_KEY(KC_C) {
+			tap_code16(C(KC_C));
+		}
+		//PASTE
+		SEQ_ONE_KEY(KC_V) {
+			tap_code16(C(KC_V));
+		}
+		//UNDO
+		SEQ_ONE_KEY(KC_Z) {
+			tap_code16(C(KC_Z));
+		}
+		//REDO
+		SEQ_ONE_KEY(KC_Y) {
+			tap_code16(C(KC_Y));
+		}
+		//SAVE
+		SEQ_ONE_KEY(KC_S) {
+			tap_code16(C(KC_S));
+		}
+		//SAVE AS
+		SEQ_TWO_KEYS(KC_S, KC_A) {
+			tap_code16(C(S(KC_S)));
+		}
+		//SHOW DESKTOP
+		SEQ_ONE_KEY(KC_D) {
+			tap_code16(G(KC_D));
+		}
+		//SELECT ALL
+		SEQ_ONE_KEY(KC_A) {
+			tap_code16(C(KC_A));
+		}
+		//FIND
+		SEQ_ONE_KEY(KC_F) {
+			tap_code16(C(KC_F));
+		}
+		//SCREENSHOT
+		SEQ_TWO_KEYS(KC_S, KC_C) {
+			tap_code16(S(G(KC_S)));
+		}
+		//BLOSSOM
+		SEQ_FOUR_KEYS(KC_M, KC_A, KC_R, KC_I)
+			SEND_STRING(":blossom:");
+	}
+}

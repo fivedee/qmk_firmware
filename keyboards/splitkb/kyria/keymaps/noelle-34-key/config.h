@@ -34,11 +34,10 @@
 
 //Tapping term settings
 #define TAPPING_TERM 170
-#define TAP_CODE_DELAY 80
 
 //Combo mod settings
-#define COMBO_TERM 80
-#define COMBO_COUNT 2
+#define COMBO_TERM 50
+#define COMBO_COUNT 3
 
 //Leader key settings
 #define LEADER_TIMEOUT 450
